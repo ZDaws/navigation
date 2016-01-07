@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dfJ-tU-SfV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit2 View Controller-->
+        <scene sceneID="DfZ-Ee-Lf7">
+            <objects>
+                <viewController id="UR9-nD-hkW" customClass="Edit2ViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BMx-Zj-r4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="bt3-sa-mGG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="100" id="bjG-mc-5JJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="AgZ-m5-qar">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FcV-AD-ivA"/>
+                                    <constraint firstAttribute="height" constant="60" id="f3y-7I-ktQ"/>
+                                    <constraint firstAttribute="width" constant="600" id="q6q-ZX-cBn"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="This Event Screen" id="zmT-zv-11b">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="U8b-Xp-h6m">
+                                            <connections>
+                                                <segue destination="dfJ-tU-SfV" kind="show" animates="NO" id="rAr-Lv-WGa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Tte-mv-7dD">
+                                            <connections>
+                                                <segue destination="VPf-w8-zFd" kind="presentation" animates="NO" id="8jh-ax-dk3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FcV-AD-ivA"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AgZ-m5-qar" secondAttribute="trailing" constant="-20" id="4vg-km-X1F"/>
+                            <constraint firstItem="AgZ-m5-qar" firstAttribute="top" secondItem="bjG-mc-5JJ" secondAttribute="topMargin" id="xZL-t8-ySM"/>
+                            <constraint firstItem="AgZ-m5-qar" firstAttribute="leading" secondItem="bjG-mc-5JJ" secondAttribute="leadingMargin" constant="-20" id="zOe-oo-7HR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E17-AB-Scd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcQ-MF-UUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1470" y="1040"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="GPp-SU-iF3">
+            <objects>
+                <viewController id="dfJ-tU-SfV" customClass="TableViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tpx-E3-4rd"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6L-rh-n5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JLk-W9-jab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="6df-E9-cZ1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="odb-JP-Bqe"/>
+                                    <constraint firstAttribute="height" constant="100" id="uej-FI-WDB"/>
+                                    <constraint firstAttribute="width" constant="600" id="yIC-YE-zWY"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="ddV-gi-9dL">
+                                        <barButtonItem key="rightBarButtonItem" title="New Event" id="nLd-jq-jfS">
+                                            <connections>
+                                                <segue destination="VPf-w8-zFd" kind="show" id="yx0-f9-v8T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uej-FI-WDB"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="prototype1" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Hx-4N-0j4">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototype1" rowHeight="66" id="9ZW-CT-t5J">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ZW-CT-t5J" id="1oI-iv-bRh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dfJ-tU-SfV" id="wun-nU-SVm"/>
+                                    <outlet property="delegate" destination="dfJ-tU-SfV" id="mui-4n-cKp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Hx-4N-0j4" firstAttribute="top" secondItem="6df-E9-cZ1" secondAttribute="bottom" id="8Hk-nx-Skw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6df-E9-cZ1" secondAttribute="trailing" constant="-20" id="Io6-UU-lvR"/>
+                            <constraint firstItem="6df-E9-cZ1" firstAttribute="leading" secondItem="JLk-W9-jab" secondAttribute="leadingMargin" constant="-20" id="LsS-Bn-00E"/>
+                            <constraint firstItem="6df-E9-cZ1" firstAttribute="top" secondItem="JLk-W9-jab" secondAttribute="topMargin" id="Mhx-rO-6zT"/>
+                            <constraint firstItem="U6L-rh-n5g" firstAttribute="top" secondItem="1Hx-4N-0j4" secondAttribute="bottom" id="O8p-uA-cVm"/>
+                            <constraint firstItem="1Hx-4N-0j4" firstAttribute="leading" secondItem="JLk-W9-jab" secondAttribute="leadingMargin" constant="-20" id="lZq-7v-MP4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Hx-4N-0j4" secondAttribute="trailing" constant="-20" id="wwn-if-UhQ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="1Hx-4N-0j4" id="odd-6I-tzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFF-gG-7TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="126"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="4yl-zE-Kkd">
+            <objects>
+                <viewController id="VPf-w8-zFd" customClass="EditViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NxG-JP-Iby"/>
+                        <viewControllerLayoutGuide type="bottom" id="j1i-nM-ncv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="bd6-zZ-ySP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Jn9-TA-fnC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0gV-wp-lVj"/>
+                                    <constraint firstAttribute="width" constant="600" id="5mX-d0-TSY"/>
+                                    <constraint firstAttribute="height" constant="100" id="PbX-dN-Fqw"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Edit Screen" id="sdv-Ug-K6S">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jw3-Sv-W2m">
+                                            <connections>
+                                                <segue destination="UR9-nD-hkW" kind="presentation" animates="NO" id="MjY-M0-QKH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PbX-dN-Fqw"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jn9-TA-fnC" firstAttribute="leading" secondItem="bd6-zZ-ySP" secondAttribute="leadingMargin" constant="-20" id="Mfc-HY-AGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jn9-TA-fnC" secondAttribute="trailing" constant="-20" id="PUy-WR-o8d"/>
+                            <constraint firstItem="Jn9-TA-fnC" firstAttribute="top" secondItem="bd6-zZ-ySP" secondAttribute="topMargin" id="pQg-Bg-SLk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="c4T-Sp-Z8A">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eSp-y1-HTi"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GD5-R7-4g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="1040"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8jh-ax-dk3"/>
+    </inferredMetricsTieBreakers>
+</document>
